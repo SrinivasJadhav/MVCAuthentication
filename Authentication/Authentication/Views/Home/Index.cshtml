@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2><strong>Home Page </strong></h2><br /><br />
+            Currently Logged-In as @User.Identity.Name ! and Role as @User.FindFirst(claim => claim.Type == System.Security.Claims.ClaimTypes.Role)?.Value
+            <br />
+            <a asp-action="logout" asp-controller="account">
+                Logout
+            </a>
+            <br />
+            <br />
+            <h4>Demo for Authentication, Authorization and applying Anti-Forgery token when the form is posted.</h4>
+        </div>
+    </div>
+</div>
